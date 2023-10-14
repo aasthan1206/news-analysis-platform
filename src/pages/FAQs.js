@@ -45,14 +45,14 @@ const FAQs = () => {
             <div
               onClick={() => {
                 setQuesId(item.id);
-                setIsOpen(!isOpen);
+                // setIsOpen(!isOpen);
               }}
               className="text-grey-dark text-xl font-semibold flex justify-between"
             >
               {item.question} <span><BiSolidDownArrow /></span>
             </div>
             {/* {isOpen && */}
-            <div className={cx('hidden py-2 text-grey-medium font-semibold', {'!block': item.id === quesId && isOpen === true})}>{item.answer}</div>
+            <div className={cx('hidden py-2 text-grey-medium font-semibold', {'!block': item.id === quesId})}>{item.answer}</div>
             {/* } */}
           </div>
         ))}
