@@ -1,9 +1,10 @@
 import React from "react";
 import newsV5 from "../assets/images/newsV5.jpg";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -20,7 +21,7 @@ const SignUp = () => {
     e.preventDefault();
     try {
       const body = { formData };
-      const response = await fetch("http://localhost:5000/signup", {
+      const response = await fetch("http://localhost:5002/register ", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -31,6 +32,7 @@ const SignUp = () => {
           password: formData.password,
         }),
       });
+      navigate("/Login");
     } catch (err) {
       console.error(err.message);
     }

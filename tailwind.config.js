@@ -11,6 +11,14 @@ module.exports = {
         'grey-medium': '#3e5c76',
         'grey-dark': '#1d2d44',
       },
+      fontFamily: {
+        crimson: ["CrimsonText-Regular"],
+        merri: ["Merriweather-Regular"],
+        tiltneon: ["TiltNeon-Regular"],
+      },
+      backgroundImage: {
+        'profile': "url('/src/assets/images/np3.jpg')",
+      },
     },
   },
   plugins: [],
