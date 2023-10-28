@@ -32,6 +32,8 @@ const Profile = () => {
     password: " ",
   });
 
+  const startTime = performance.now();
+
   const fetchUser = async () => {
     try {
       const response = await fetch(
@@ -55,11 +57,15 @@ const Profile = () => {
     }
   };
 
+const endTime = performance.now();
+const responseTime = endTime - startTime;
+console.log(`Response time fetch: ${responseTime} milliseconds`);
+
   const handleChange = (e) => {
     console.log(e);
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  const startTimeEdit = performance.now();
   const onFormSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -82,6 +88,9 @@ const Profile = () => {
       console.error(err.message);
     }
   };
+  const endTimeEdit = performance.now();
+const responseTimeEdit = endTimeEdit - startTimeEdit;
+console.log(`Response time edit: ${responseTime} milliseconds`);
 
   const deleteUser = async () => {
     try {
@@ -103,14 +112,14 @@ const Profile = () => {
   }, []);
   return (
     <div className="bg-profile bg-cover p-16">
-      <div className="bg-gradient-to-r from-white via-grey-light to-white rounded-xl py-8 px-16">
+      <div className="bg-white bg-opacity-70 rounded-xl py-8 px-16">
         <div className="text-3xl font-merri font-bold text-center">
-          Welcome, {userData.first_name}
+          Welcome, <span className="">{userData.first_name}</span>
         </div>
         <div className="flex justify-around">
           <div className="mt-16">
             {sideBarData?.map((item) => (
-              <div className="border-grey-dark border-2 rounded-md hover:shadow-md hover:shadow-grey-medium px-6 text-center py-3 cursor-pointer w-full my-4">
+              <div className="border-grey-dark border-2 rounded-md hover:shadow-md hover:shadow-grey-medium px-6 text-center py-3 cursor-pointer w-full my-4 hover:bg-grey-light">
                 <div
                   key={item.id}
                   className="text-grey-dark font-crimson font-semibold text-xl"
@@ -120,7 +129,7 @@ const Profile = () => {
                 <div className="font-crimson text-grey-dark">{item.desc}</div>
               </div>
             ))}
-            <div onClick={() => deleteUser()} className="text-red-500 font-semibold font-crimson border-red-500 border-2 rounded-md hover:shadow-md hover:shadow-red-400 px-6 text-center py-3 cursor-pointer w-full my-4 bg-white text-xl">
+            <div onClick={() => deleteUser()} className="text-red-light font-semibold font-crimson border-red-light border-2 rounded-md hover:shadow-md hover:shadow-red-dark px-6 text-center py-3 cursor-pointer w-full my-4 bg-white text-xl">
               Delete Account
             </div>
           </div>
@@ -199,7 +208,7 @@ const Profile = () => {
               />
             </div>
             <div>
-              <button className="bg-grey-medium font-bold text-primary px-4 py-2 rounded-sm hover:bg-grey-dark mx-auto flex my-2">
+              <button className="bg-grey-dark font-bold text-white px-4 py-2 rounded-sm hover:bg-red-dark mx-auto flex my-2">
                 Update Information
               </button>
             </div>

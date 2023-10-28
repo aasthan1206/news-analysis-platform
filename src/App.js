@@ -15,6 +15,7 @@ import { Navigate } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import Landing from "./pages/Landing";
 import Profile from "./pages/Profile";
+import Feedback from "./pages/Feedback";
 
 function App() {
   const { login, logout, isAuthenticated } = useContext(AuthContext);
@@ -36,7 +37,7 @@ function App() {
       <Router basename={process.env.PUBLIC_URL}>
         <Layout>
           <Routes>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/" element={isAuthenticated ? <Home /> : <Landing />}></Route>
             {/* <Route path="/" element={<Home />}></Route> */}
             <Route path="/Landing" element={isAuthenticated ? <Home /> : <Landing />}></Route>
             <Route path="/About" element={<About />}></Route>
@@ -48,7 +49,8 @@ function App() {
             <Route path="/SignUp" element={<SignUp />}></Route>
             <Route path="/FAQs" element={<FAQs />}></Route>
             <Route path="/Profile" element={<Profile />}></Route>
-            <Route path="/NewsFetch" element={<NewsFetch />}></Route>
+            <Route path="/Feedback" element={isAuthenticated ? <Feedback /> : <Login />}></Route>
+            {/* <Route path="/NewsFetch" element={<NewsFetch />}></Route> */}
           </Routes>
         </Layout>
       </Router>

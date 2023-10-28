@@ -54,8 +54,8 @@ const Login = () => {
         <img src={newsV6} alt="login" />
       </div>
       <form action="" onSubmit={onFormSubmit} className="mr-12">
-        <div className="text-grey-light text-3xl font-bold pb-6">
-          Sign <span className="text-grey-dark">In</span>
+        <div className="text-grey-dark text-3xl font-bold pb-6">
+          Sign <span className="text-red-dark">In</span>
         </div>
         <div>
           <label htmlFor="" className="text-grey-dark font-bold">
@@ -94,7 +94,7 @@ const Login = () => {
           </div>
         </div>
         <div>
-          <button className="bg-grey-dark font-bold text-primary px-4 py-2 rounded-sm hover:bg-grey-medium  mx-auto flex my-2">
+          <button className="bg-grey-dark font-bold text-white px-4 py-2 rounded-sm hover:bg-red-dark mx-auto flex my-2">
             Login
           </button>
         </div>

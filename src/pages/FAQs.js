@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import faqV2 from "../assets/images/faqV2.png";
+import qm1 from "../assets/images/qm1.png"
 import cx from "classnames";
 import { BiSolidDownArrow } from "react-icons/bi";
 import { Navigate } from "react-router-dom";
@@ -7,33 +8,33 @@ import { Navigate } from "react-router-dom";
 const FaqData = [
   {
     id: 1,
-    question: "Question",
+    question: "What is sentiment analysis, and how does it enhance my news reading experience?",
     answer:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam iure, magnam deleniti harum quasi corporis aliquid error quia repudiandae officiis maxime, hic dolorum rerum fuga sapiente sint natus sequi. Temporibus?",
+      "Sentiment analysis examines emotional tones in text, enhancing understanding of news articles. It reveals emotional context, aiding in comprehensive news interpretation.",
   },
   {
     id: 2,
-    question: "Question",
+    question: "How does the platform categorize the polarity of news articles as positive, negative, or neutral?",
     answer:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam iure, magnam deleniti harum quasi corporis aliquid error quia repudiandae officiis maxime, hic dolorum rerum fuga sapiente sint natus sequi. Temporibus?",
+      "The platform utilizes advanced sentiment analysis algorithms to categorize articles based on emotional tone, identifying sentiments as positive, negative, or neutral.",
   },
   {
     id: 3,
-    question: "Question",
+    question: "What are the criteria used for selecting and displaying news articles on the platform?",
     answer:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam iure, magnam deleniti harum quasi corporis aliquid error quia repudiandae officiis maxime, hic dolorum rerum fuga sapiente sint natus sequi. Temporibus?",
+      "We select and display articles based on relevance, credibility, and diversity. Our aim is to provide a comprehensive and balanced coverage of various news topics.",
   },
   {
     id: 4,
-    question: "Question",
+    question: "How can I create an account, and what are the benefits of having one?",
     answer:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam iure, magnam deleniti harum quasi corporis aliquid error quia repudiandae officiis maxime, hic dolorum rerum fuga sapiente sint natus sequi. Temporibus?",
+      "Creating an account is simple and offers benefits such as article saving, personalized news, and access to exclusive features, enhancing your overall news experience.",
   },
   {
     id: 5,
-    question: "Question",
+    question: "How frequently is the news feed updated with the latest articles from various sources?",
     answer:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam iure, magnam deleniti harum quasi corporis aliquid error quia repudiandae officiis maxime, hic dolorum rerum fuga sapiente sint natus sequi. Temporibus?",
+      "Our news feed is regularly updated in real-time, ensuring a constant flow of the latest articles from diverse and reputable sources worldwide, keeping you informed.",
   },
 ];
 
@@ -46,10 +47,11 @@ const FAQs = () => {
     <div>
       {/* {authenticated && ( */}
       <div className="">
-        <div className="">
-          <img src={faqV2} alt="faq" className="w-1/3 mx-auto" />
+        <div className="bg-grey-dark flex justify-evenly">
+          <img src={qm1} alt="faq" className="w-1/3" />
+          <div className="text-grey-light text-6xl self-center font-merri font-bold">Got Some Questions</div>
         </div>
-        <div className="-mt-24 mb-12">
+        <div className="mb-12">
           {FaqData?.map((item) => (
             <div
               key={item.id}

@@ -1,5 +1,5 @@
 import React from "react";
-import contactV1 from "../assets/images/contactV1.png";
+import contactUs1 from "../assets/images/contactUs1.png";
 import { AiOutlineMail } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
@@ -27,17 +27,17 @@ const Contact = () => {
       ];
   return (
     <div>
-      <div className="bg-grey-dark flex justify-evenly items-center">
-        <div className="text-primary font-bold text-8xl"> Contact Us</div>
-        <div className="">
-          <img src={contactV1} alt="contact us" />
+      <div className="bg-grey-dark flex justify-between items-center">
+        <div className="text-grey-light font-bold text-8xl px-16"> Contact Us</div>
+        <div className="w-1/2">
+          <img src={contactUs1} alt="contact us" className="" />
         </div>
       </div>
       <div className="flex justify-between">
         <div className="w-1/3 mx-8 my-8">
             <div className="font-bold text-grey-medium text-lg pl-0.5">We are here to help you</div>
             <div className="font-semibold text-grey-dark text-3xl">Here's how you can reach us</div>
-            <div className="text-grey-light py-2">Don't hesitate! We are here to address your queries. We will be obliged to answer your questions. Our team is always there you assist you.</div>
+            <div className="text-red-light py-2">Don't hesitate! We are here to address your queries. We will be obliged to answer your questions. Our team is always there you assist you.</div>
             <div>
                 {ContactData?.map((item) => (
                     <div key={item.id}>
@@ -47,7 +47,7 @@ const Contact = () => {
                       <div className="text-xl font-semibold text-grey-dark">
                         {item.title}
                       </div>
-                      <div className="text-lg font-medium text-grey-light">
+                      <div className="text-lg font-medium text-red-light">
                         {item.desc}
                       </div>
                     </div>
@@ -58,8 +58,8 @@ const Contact = () => {
             </div>
 
         </div>
-        <div className="bg-primary w-1/2 py-8 px-8 mx-8 my-8">
-          <div className="font-bold text-grey-medium text-lg">Are you curious?</div>
+        <div className="bg-grey-light w-1/2 py-8 px-8 mx-8 my-8">
+          <div className="font-bold text-red-light text-lg">Are you curious?</div>
           <div className="font-semibold text-grey-dark text-3xl py-2">Feel free to write us message!</div>
           <form
             action=""
@@ -105,7 +105,7 @@ const Contact = () => {
               />
             </div>
             <div className="">
-              <button className="bg-grey-dark font-bold text-primary px-4 py-2 rounded-sm hover:bg-grey-medium my-2 w-full text-center">
+              <button className="bg-red-dark font-bold text-white px-4 py-2 rounded-sm hover:bg-grey-dark my-2 w-full text-center">
                 Submit
               </button>
             </div>

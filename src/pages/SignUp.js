@@ -40,7 +40,7 @@ const SignUp = () => {
   return (
     <div className="flex justify-between bg-primary">
       <form action="" onSubmit={onFormSubmit} className="w-1/3 mx-auto my-8">
-        <div className="text-grey-light text-3xl font-bold pb-6">Sign <span className="text-grey-dark">Up</span></div>
+        <div className="text-grey-dark text-3xl font-bold pb-6">Sign <span className="text-red-dark">Up</span></div>
         <div>
           <label htmlFor="" className="text-grey-medium font-bold">
             First Name<span className="text-red-500">*</span>
@@ -112,7 +112,7 @@ const SignUp = () => {
           />
         </div>
         <div>
-          <button className="bg-grey-medium font-bold text-primary px-4 py-2 rounded-sm hover:bg-grey-dark mx-auto flex my-2">
+          <button className="bg-grey-medium font-bold text-white px-4 py-2 rounded-sm hover:bg-red-dark mx-auto flex my-2">
             Create Account
           </button>
         </div>

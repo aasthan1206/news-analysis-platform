@@ -53,24 +53,25 @@ const Footer = () => {
       title: "Contact Us",
       link: "/Contact",
     },
-    {
-        id: 6,
-        title: "Sign In",
-        link: "/Login",
-      },
-      {
-        id: 7,
-        title: "Sign Up",
-        link: "/SignUp",
-      },
+    // {
+    //     id: 6,
+    //     title: "Sign In",
+    //     link: "/Login",
+    //   },
+    //   {
+    //     id: 7,
+    //     title: "Sign Up",
+    //     link: "/SignUp",
+    //   },
   ];
   return (
-    <div className="bg-grey-dark text-primary flex justify-evenly py-8">
+    <div className="bg-grey-dark text-grey-light pt-8 pb-4 px-16">
+    <div className=" flex justify-between">
         <div>
             <div>LOGO</div>
             <div className="flex">
                 {SocialIcons?.map((item) => (
-                    <div key = {item.id} className="p-3 rounded-full bg-grey-dark hover:bg-grey-light text-primary cursor-pointer">{item.icon}</div>
+                    <div key = {item.id} className="p-3 rounded-full bg-grey-dark hover:bg-red-dark text-grey-light cursor-pointer">{item.icon}</div>
                 ))}
             </div>
         </div>
@@ -79,7 +80,7 @@ const Footer = () => {
             <div className="flex-col">
                 {
                     PagesLinks?.map((item) => (
-                        <Link key={item.id} to={item.link}><div className="pb-1 hover:underline">{item.title}</div></Link>
+                        <Link key={item.id} to={item.link}><div className="pb-1 hover:text-red-dark">{item.title}</div></Link>
                     ))
                 }
             </div>
@@ -87,18 +88,22 @@ const Footer = () => {
         <div>
           <div className="text-lg font-semibold pb-3 text-primary flex gap-4">
             <MdOutlineLocationOn className="h-8 w-8 text-primary" />
-            <span className="text-primary">Indore </span>
+            <span className="select-none">Indore </span>
           </div>
           <div className="text-lg font-semibold pb-3 text-primary flex gap-4">
             <AiOutlineMail className="h-8 w-8 text-primary" />{" "}
-            <span className="text-primary">donatehelp@mail.com</span>{" "}
+            <span className="select-none">newsplatform@mail.com</span>{" "}
           </div>
           <div className="text-lg font-semibold pb-3 text-primary flex gap-4">
             <FiPhoneCall className="h-8 w-8 text-primary" />{" "}
-            <span className="text-primary">+91 1234567890</span>{" "}
+            <span className="select-none">+91 1234567890</span>{" "}
           </div>
         </div>
-
+        
+    </div>
+    <div className="border-t-[1px] border-grey-light mt-4 text-xs text-center pt-4">
+    © 2023 News Platform | All Rights Reserved
+    </div>
     </div>
   )
 };

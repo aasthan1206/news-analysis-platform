@@ -6,7 +6,7 @@ import newsV7 from "../assets/images/newsV7.jpg"
 const About = () => {
   return (
     <div className=''>
-        <div className='text-7xl font-bold text-grey-dark text-center py-8'>Know More <span className='text-grey-medium'>About Us</span></div>
+        <div className='text-7xl font-bold text-grey-dark text-center py-8'>Know More <span className='text-red-dark'>About Us</span></div>
 
         <div className='mx-8 '>
             <div className='flex justify-center'>  

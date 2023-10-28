@@ -29,10 +29,10 @@ const NewsCategory = [
   },
 ];
 const Home = () => {
-  const [newsData, setNewsData] = useState([]);
   const [sentimentData, setSentimentData] = useState([]);
   const [isDataLoaded, setIsDataLoaded] = useState(false);
-  const apiKey = "pub_30840cab9d35de88ec283c01986db6eab4a4f"; // Replace with your News API key
+
+  const startTime = performance.now();
 
   // Function to fetch all sentiment analysis data
   const fetchAllSentiments = async () => {
@@ -53,23 +53,11 @@ const Home = () => {
     });
   }, []); // Empty dependency array means this effect runs once on component mount
 
-  const fetchNews = async (url) => {
-    try {
-      const response = await axios.get(url);
-      setNewsData(response.data.results);
-      console.log(newsData);
-      axios
-        .post("http://localhost:5000/saveNewsData", { newsData })
-        .then((response) => {
-          console.log(response.data.message);
-        })
-        .catch((error) => {
-          console.error("Error saving news data:", error);
-        });
-    } catch (error) {
-      console.error("Error fetching news data:", error);
-    }
-  };
+  const endTime = performance.now();
+  const responseTime = endTime - startTime;
+  console.log(`Response time: ${responseTime} milliseconds`);
+  // 0.10000000149011612 milliseconds
+
   return (
     <div className="">
       <div className="h-12 bg-grey-light text-grey-dark font-medium text-center flex justify-evenly items-center">
@@ -361,13 +349,16 @@ const Home = () => {
           {/* BOTTOM */}
           <div className="grid grid-cols-3 gap-8 border-t-2 border-grey-light py-4">
             {sentimentData?.slice(20, 29)?.map((article, index) => (
-              <div key={index} className="border-b-[1px] border-grey-light pb-2">
+              <div
+                key={index}
+                className="border-b-[1px] border-grey-light pb-2"
+              >
                 <div className="text-grey-medium">{article.source_id}</div>
                 <div className="text-lg font-semibold">{article.title}</div>
                 {sentimentData.length > 0 && (
                   <div className="text-red-500 pt-2 font-semibold flex gap-6">
-                      <p>Polarity: {article?.Polarity}</p>
-                      <p>Subjectivity: {article?.Subjectivity}</p>
+                    <p>Polarity: {article?.Polarity}</p>
+                    <p>Subjectivity: {article?.Subjectivity}</p>
                   </div>
                 )}
               </div>
