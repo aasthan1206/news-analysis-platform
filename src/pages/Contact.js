@@ -37,7 +37,7 @@ const Contact = () => {
         <div className="w-1/3 mx-8 my-8">
             <div className="font-bold text-grey-medium text-lg pl-0.5">We are here to help you</div>
             <div className="font-semibold text-grey-dark text-3xl">Here's how you can reach us</div>
-            <div className="text-red-light py-2">Don't hesitate! We are here to address your queries. We will be obliged to answer your questions. Our team is always there you assist you.</div>
+            <div className="text-gray-500 py-2">Don't hesitate! We are here to address your queries. We will be obliged to answer your questions. Our team is always there you assist you.</div>
             <div>
                 {ContactData?.map((item) => (
                     <div key={item.id}>
@@ -47,7 +47,7 @@ const Contact = () => {
                       <div className="text-xl font-semibold text-grey-dark">
                         {item.title}
                       </div>
-                      <div className="text-lg font-medium text-red-light">
+                      <div className="text-lg font-medium text-gray-500">
                         {item.desc}
                       </div>
                     </div>
@@ -59,7 +59,7 @@ const Contact = () => {
 
         </div>
         <div className="bg-grey-light w-1/2 py-8 px-8 mx-8 my-8">
-          <div className="font-bold text-red-light text-lg">Are you curious?</div>
+          <div className="font-bold text-gray-500 text-lg">Are you curious?</div>
           <div className="font-semibold text-grey-dark text-3xl py-2">Feel free to write us message!</div>
           <form
             action=""
@@ -105,7 +105,7 @@ const Contact = () => {
               />
             </div>
             <div className="">
-              <button className="bg-red-dark font-bold text-white px-4 py-2 rounded-sm hover:bg-grey-dark my-2 w-full text-center">
+              <button className="hover:bg-red-dark font-bold text-white px-4 py-2 rounded-sm bg-grey-dark my-2 w-full text-center">
                 Submit
               </button>
             </div>

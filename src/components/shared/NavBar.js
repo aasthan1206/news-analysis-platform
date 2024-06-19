@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/authContext";
 import { FaUserAlt } from "react-icons/fa";
 import cx from "classnames";
+import logo from "../../assets/images/logo.png"
 
 const NavBar = () => {
   const NavBarData = [
@@ -72,10 +73,10 @@ const NavBar = () => {
 
   return (
     <div className="bg-grey-dark text-primary flex justify-between px-10 h-12 items-center">
-      <div className="px-10">
+      <div className="">
         {" "}
         <Link to={"/Landing"} className="hover:underline cursor-pointer text-grey-light">
-          LOGO
+          <img src={logo} alt="logo" className="w-1/2"/>
         </Link>
       </div>
       <div className="bg-grey-dark text-grey-light flex gap-12 items-center">

@@ -56,12 +56,13 @@ const Landing = () => {
   return (
     <div className="">
       {/* Hero Section */}
-      <div className=" bg-hero bg-cover h-screen">
+      <div className=" bg-hero bg-cover h-screen bg-black relative">
+        <div className="h-screen absolute bg-opacity-50">
         <div className="text-5xl text-center font-merri font-bold text-grey-light py-8">
           Welcome to <span className="text-red-dark"> News Platform </span> -
           Your Gateway to Informed News Consumption
         </div>
-        <div className="px-24 font-crimson text-lg font-semibold opacity-80 text-grey-dark">
+        <div className="px-24 text-lg opacity-80 text-grey-light">
           In a world inundated with information, understanding the true essence
           of news often remains obscured. We are dedicated to redefining the way
           you engage with news. Our innovative web-based platform goes beyond
@@ -70,9 +71,9 @@ const Landing = () => {
           article.
         </div>
         <div className="flex px-24 pt-40 gap-44 justify-between">
-          <div className="w-1/3 bg-grey-medium bg-opacity-60 px-8 py-4">
-            <div className="text-center text-lg font-merri font-bold text-red-dark">
-              Polarity
+          <div className="w-1/3 bg-grey-medium bg-opacity-90 px-8 py-4">
+            <div className="text-center text-lg font-bold text-grey-light">
+              POLARITY
             </div>
             <div className="text-justify text-grey-light font-crimson">
               In the realm of sentiment analysis, polarity refers to the
@@ -80,9 +81,9 @@ const Landing = () => {
               sentiment as either positive, negative, or neutral.
             </div>
           </div>
-          <div className="w-1/3 bg-grey-medium bg-opacity-60 px-8 py-4">
-            <div className="text-center text-lg font-merri font-bold text-red-dark">
-              Subjectivity
+          <div className="w-1/3 bg-grey-medium bg-opacity-90 px-8 py-4">
+            <div className="text-center text-lg font-bold text-grey-light">
+              SUBJECTIVITY
             </div>
             <div className="text-justify text-grey-light font-crimson">
               In the realm of sentiment analysis, polarity refers to the
@@ -91,29 +92,32 @@ const Landing = () => {
             </div>
           </div>
         </div>
+        </div>
       </div>
 
       <div className="mx-12">
         {/* Section 2 */}
         <div className="flex">
           {/* neg news left div */}
-          <div className="bg-negNews bg-cover pt-56 text-4xl font-tiltneon font-bold text-red-light text-center px-12 w-2/3 h-[600px] mt-12 leading-relaxed tracking-wider">
-           <span className="opacity-80"> Negative news can feed our fears, making it vital to consume it
-            mindfully.</span>
+          <div className="bg-negNews bg-cover text-4xl font-merri italic font-bold text-red-light text-center w-2/3 h-[600px] mt-12 leading-relaxed tracking-wider relative">
+            {/* <div className="h-[600px] absolute bg-opacity-50 bg-grey-light"> */}
+           <div className="bg-opacity-80 bg-grey-light mt-52 px-12"> Negative news can feed our fears, making it vital to consume it
+            mindfully.</div>
+          {/* </div> */}
           </div>
           {/* Two grey boxes */}
           <div className="pt-12 w-1/3">
             <div className="h-[300px] relative  bg-eg1 bg-cover text-center">
               <div className="h-[300px] absolute bg-opacity-50 bg-grey-medium">
-              <div className="text-grey-dark py-4 px-8 text-lg font-crimson pb-2 font-semibold">
+              <div className="text-grey-light py-4 px-8 text-lg font-crimson pb-2 font-semibold">
                 Australia vs Sri Lanka Live Score, Cricket World Cup 2023:
                 Bottom placed Australia hope for change in fortune
               </div>
-              <div className="text-grey-dark text-lg font-crimson font-semibold pb-1 ">
+              <div className="text-grey-light text-lg font-crimson font-semibold pb-1 ">
                 Polarity: <br />
                 0.054075695
               </div>
-              <div className="text-grey-dark text-lg font-crimson font-semibold">
+              <div className="text-grey-light text-lg font-crimson font-semibold">
                 Subjectivity: <br />
                 0.497584541
               </div>

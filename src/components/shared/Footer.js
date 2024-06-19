@@ -7,6 +7,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.png"
 
 const Footer = () => {
   const SocialIcons = [
@@ -68,7 +69,9 @@ const Footer = () => {
     <div className="bg-grey-dark text-grey-light pt-8 pb-4 px-16">
     <div className=" flex justify-between">
         <div>
-            <div>LOGO</div>
+            <div className="pl-1">
+              <img src={logo} alt="logo" className="w-1/2" />
+            </div>
             <div className="flex">
                 {SocialIcons?.map((item) => (
                     <div key = {item.id} className="p-3 rounded-full bg-grey-dark hover:bg-red-dark text-grey-light cursor-pointer">{item.icon}</div>
