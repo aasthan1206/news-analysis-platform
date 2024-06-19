@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.87e72c5c.css",
+    "main.js": "/static/js/main.3be82d26.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/np3.jpg": "/static/media/np3.01d7dcaf2e3dd5723ee0.jpg",
+    "static/media/newsNeg.jpg": "/static/media/newsNeg.66d805746f179e0a3891.jpg",
+    "static/media/newsV6.jpg": "/static/media/newsV6.629f490ad353bc54d10f.jpg",
+    "static/media/newsV7.jpg": "/static/media/newsV7.d83dc6f234fa63732fae.jpg",
+    "static/media/newsV5.jpg": "/static/media/newsV5.f02b5a38c16f65442627.jpg",
+    "static/media/feedback2.jpg": "/static/media/feedback2.76e7cbe4a27efd9b3a0f.jpg",
+    "static/media/newsV1.jpg": "/static/media/newsV1.e55ea8432ba632a59a94.jpg",
+    "static/media/faqV2.png": "/static/media/faqV2.6cf36f45ba62ddf8d9da.png",
+    "static/media/newsV3.jpg": "/static/media/newsV3.c5d24ce841c57b3ce860.jpg",
+    "static/media/Merriweather-Regular.ttf": "/static/media/Merriweather-Regular.da67ca8c38ef44c4773d.ttf",
+    "static/media/hero.jpg": "/static/media/hero.d62c54048bf371149f78.jpg",
+    "static/media/contactUs1.png": "/static/media/contactUs1.80ee25e3231993ca6f03.png",
+    "static/media/CrimsonText-Regular.ttf": "/static/media/CrimsonText-Regular.b7af1dccae742a310539.ttf",
+    "static/media/eg1.jpeg": "/static/media/eg1.cd26beaeaee0a0dc6be5.jpeg",
+    "static/media/graph1.png": "/static/media/graph1.5305d62243eaeeaf151e.png",
+    "static/media/TiltNeon-Regular.ttf": "/static/media/TiltNeon-Regular.018710fd7deba9929601.ttf",
+    "static/media/feedback1.png": "/static/media/feedback1.0fb97d8ade21c6f3f8f9.png",
+    "static/media/graph5.png": "/static/media/graph5.bc8b4d168119cf6c0be6.png",
+    "static/media/hindu.png": "/static/media/hindu.48788edca6854b507e7a.png",
+    "static/media/ndtv.png": "/static/media/ndtv.77a7f8875c378335595b.png",
+    "static/media/qm1.png": "/static/media/qm1.62ab9211abe3b6b913f8.png",
+    "static/media/logo.png": "/static/media/logo.1a546d8448b203798422.png",
+    "static/media/sa2.png": "/static/media/sa2.ac313ab9f696b55b43d6.png",
+    "static/media/toi.png": "/static/media/toi.6c568187a56a9480b2c6.png",
+    "static/media/eg2.jpeg": "/static/media/eg2.172a50a8d4b6ba17b912.jpeg",
+    "static/media/graph8.jpg": "/static/media/graph8.81cc09fb1b3bc629c848.jpg",
+    "static/media/graph7.png": "/static/media/graph7.b4b2bf0f0275a1bbfc24.png",
+    "static/media/zee.svg": "/static/media/zee.fa8dd17ce7a1e2141ab971316126408b.svg",
+    "index.html": "/index.html",
+    "main.87e72c5c.css.map": "/static/css/main.87e72c5c.css.map",
+    "main.3be82d26.js.map": "/static/js/main.3be82d26.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87e72c5c.css",
+    "static/js/main.3be82d26.js"
+  ]
+}
